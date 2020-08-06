@@ -134,19 +134,20 @@ In the next part of the command, the information before the colon is the path to
 The information after the colon is where it ends up in the container (also known as the target). You can set this to any other name, and adapt the following commands accordingly. 
 > Windows users, remember to [change pwd according to your system](https://stackoverflow.com/a/41489151). 
 
-```shell script
-`pwd`:/docs-inside-docker
-```
 
 3.3
-After you type (or paste) that command into terminal, and press return, we can verify that the local data has been shared with the container
+Now we can verify that the local data has been shared with the container by listing files and folders in the container.
 
-```shell script
-/ # ls docs-inside-docker
-```
+If you type `ls` you should see a list of the files and folders that are in the current location. This should show us the files in the Alpine container, including the `docs-inside-docker` folder which our last command created.  
+
+![](ls.png)
 
 3.4
-This will show us that a folder called `docs-inside-docker` has been created in the container, linked to the files in our `pwd`, by listing the folder's files. They should be the names of the files that you see in your Finder or Windows Explorer view of the input folder. Type `exit` at the command prompt to close the container.
+
+Type  `ls docs-inside-docker` 
+
+This should show us the files and folders inside the `docs-inside-docker` folder. They should be the names of the files that you see in your Finder or Windows Explorer view of the input folder. Type `exit` at the command prompt to close the container. Then close the terminal window.
+
 ```shell script
 / # exit
 ```
